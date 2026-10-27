@@ -1,0 +1,23 @@
+{
+  "name": "campus-lost-found-agent",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "寻回：校园失物招领智能助手（开源 AI 技术实践课程项目）",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env src/server.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "check": "node --check src/server.mjs && node --check src/agent.mjs && node --check src/tools.mjs && node --check public/app.js",
+    "verify:model": "node --env-file-if-exists=.env scripts/verify-model.mjs"
+  },
+  "dependencies": {
+    "@langchain/langgraph": "1.5.3",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "playwright": "1.64.1"
+  }
+}

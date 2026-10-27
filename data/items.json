@@ -1,0 +1,14 @@
+[
+  {"id":"LF-001","category":"雨伞","color":"蓝色","name":"深蓝色折叠伞","location":"图书馆","foundAt":"2026-10-25","description":"三折雨伞，黑色手柄，伞面纯色。","desk":"图书馆服务台（虚构）","status":"待认领"},
+  {"id":"LF-002","category":"水杯","color":"白色","name":"白色保温杯","location":"图书馆","foundAt":"2026-10-25","description":"白色杯身，银色杯盖，无外露姓名。","desk":"图书馆服务台（虚构）","status":"待认领"},
+  {"id":"LF-003","category":"耳机","color":"白色","name":"白色无线耳机盒","location":"教学楼","foundAt":"2026-10-24","description":"白色充电盒，透明保护套。","desk":"教学楼值班台（虚构）","status":"待认领"},
+  {"id":"LF-004","category":"雨伞","color":"蓝色","name":"浅蓝色长柄伞","location":"食堂","foundAt":"2026-10-26","description":"长柄伞，弯曲木色手柄。","desk":"食堂服务台（虚构）","status":"待认领"},
+  {"id":"LF-005","category":"钥匙","color":"银色","name":"带绿色挂件的钥匙","location":"操场","foundAt":"2026-10-23","description":"两把钥匙，绿色圆形挂件，不含门牌信息。","desk":"校园服务中心（虚构）","status":"待认领"},
+  {"id":"LF-006","category":"书籍","color":"绿色","name":"数据结构教材","location":"教学楼","foundAt":"2026-10-26","description":"绿色封面的教材，夹有空白便签。","desk":"教学楼值班台（虚构）","status":"待认领"},
+  {"id":"LF-007","category":"背包","color":"黑色","name":"黑色双肩包","location":"体育馆","foundAt":"2026-10-25","description":"黑色双肩包，侧面有反光条。","desk":"体育馆服务台（虚构）","status":"待认领"},
+  {"id":"LF-008","category":"雨伞","color":"黑色","name":"黑色折叠伞","location":"图书馆","foundAt":"2026-10-26","description":"黑色五折伞，小号便携款。","desk":"图书馆服务台（虚构）","status":"待认领"},
+  {"id":"LF-009","category":"水杯","color":"蓝色","name":"蓝色运动水杯","location":"操场","foundAt":"2026-10-26","description":"透明蓝色塑料杯，带提手。","desk":"校园服务中心（虚构）","status":"待认领"},
+  {"id":"LF-010","category":"耳机","color":"黑色","name":"黑色头戴式耳机","location":"图书馆","foundAt":"2026-10-24","description":"黑色头戴耳机，可折叠。","desk":"图书馆服务台（虚构）","status":"已归还"},
+  {"id":"LF-011","category":"雨伞","color":"蓝色","name":"蓝色格纹折叠伞","location":"图书馆","foundAt":"2026-10-26","description":"蓝白格纹伞面，短直手柄。","desk":"图书馆服务台（虚构）","status":"待认领"},
+  {"id":"LF-012","category":"眼镜","color":"黑色","name":"黑框眼镜与眼镜盒","location":"食堂","foundAt":"2026-10-25","description":"黑色镜框，灰色硬壳眼镜盒。","desk":"食堂服务台（虚构）","status":"待认领"}
+]

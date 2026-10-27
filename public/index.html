@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>寻回 · 校园失物招领助手</title><link rel="stylesheet" href="/style.css"><script src="/app.js" defer></script></head>
+<body>
+  <aside class="sidebar"><a class="brand" href="/">寻回<span>LOST & FOUND</span></a><p class="brand-note">让每一次遗失<br>都有寻找的方向。</p><button id="new-chat" class="primary">＋ 开始新对话</button><h2>最近的对话</h2><nav id="sessions" aria-label="会话历史"></nav><div class="sidebar-bottom">开源 AI 技术实践 · 路径 A<br>LangGraph / Tool Calling / Skills</div></aside>
+  <main>
+    <header><span>校园服务 / 失物招领</span><span id="mode" class="badge">正在连接</span></header>
+    <section class="intro"><div class="eyebrow">CAMPUS LOST & FOUND</div><h1>东西丢了？<br><em>一起找找看。</em></h1><p>说说物品的颜色、类别和遗失地点，<br>查询候选线索，准备一份领取核对清单。</p><span class="intro-mark" aria-hidden="true">寻</span></section>
+    <div id="notice" class="notice" role="status">正在加载运行状态…</div>
+    <section class="workspace"><div class="chat-area"><h2 class="section-title">和寻回聊聊 <span>01 / 对话</span></h2><div id="examples" class="examples"></div><div id="messages" class="messages" aria-live="polite"><div class="empty">从一条物品描述开始。<br><small>请勿输入手机号、学号或身份证信息。</small></div></div><form id="chat-form"><label for="prompt">描述你遗失的物品</label><textarea id="prompt" maxlength="2000" rows="3" placeholder="例如：我在图书馆丢了一把蓝色雨伞，帮我找找，并生成核对清单。" required></textarea><div class="composer-footer"><span>Enter 发送 · Shift + Enter 换行</span><button id="send" class="primary" type="submit">发送消息 ↗</button></div></form></div>
+    <aside class="activity"><h2 class="section-title">执行过程 <span>02 / 工具</span></h2><p class="hint">展开记录，查看实际传入的参数与工具返回结果。</p><div id="trace" aria-live="polite"><p class="muted">任务开始后，执行过程将在这里显示。</p></div><h2 class="section-title files-title">产出文件 <span>03 / 下载</span></h2><div id="files"><p class="muted">生成的核对清单将保存在本机。</p></div></aside></section>
+    <details class="data-panel"><summary>查看演示物品库 <span>全部为虚构样例</span></summary><div id="inventory" class="inventory"></div></details>
+    <footer>仅供课程演示 · 不审核所有权，不执行认领 · 实际领取安排以学校官方信息为准</footer>
+  </main>
+</body></html>
