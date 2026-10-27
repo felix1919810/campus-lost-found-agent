@@ -43,7 +43,7 @@ test('OpenAI 兼容适配器发送工具定义，并把模型选出的工具结�
   const stub=http.createServer(async(req,res)=>{let body='';for await(const c of req)body+=c;const data=JSON.parse(body);requests.push(data);res.setHeader('Content-Type','application/json');res.end(JSON.stringify({choices:[{message:requests.length===1?{role:'assistant',content:null,tool_calls:[{id:'call-test',type:'function',function:{name:'get_item',arguments:'{"id":"LF-003"}'}}]}:{role:'assistant',content:'候选 LF-003 是白色耳机盒。'}}]}));});
   await new Promise(r=>stub.listen(0,'127.0.0.1',r));t.after(()=>new Promise(r=>stub.close(r)));
   const r=await runAgent({...ctx,prompt:'帮我查 LF-003',config:{mode:'live',baseURL:`http://127.0.0.1:${stub.address().port}/v1`,apiKey:'test-only',model:'stub'}});
-  assert.equal(requests[0].tools.length,5);assert.equal(requests[1].messages.at(-1).role,'tool');assert.match(requests[1].messages.at(-1).content,/白色无线耳机盒/);assert.match(r.answer,/LF-003/);
+  assert.equal(requests[0].tools.length,5);const toolResult=requests[1].messages.findLast(m=>m.role==='tool');assert.equal(toolResult.tool_call_id,'call-test');assert.match(toolResult.content,/白色无线耳机盒/);assert.match(r.answer,/LF-003/);
 });
 test('无密钥明确报错，未知工具反馈错误，模型循环有上限',async t=>{
   await assert.rejects(callModel([],{apiKey:''}),/未配置/);
