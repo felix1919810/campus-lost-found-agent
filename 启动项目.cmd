@@ -1,21 +1,24 @@
 @echo off
+setlocal
 chcp 65001 >nul
 cd /d "%~dp0"
-where node >nul 2>nul
+where node.exe >nul 2>nul
 if errorlevel 1 (
-  echo 请先安装 Node.js 22 或更高版本：https://nodejs.org/
+  echo Node.js 22 or newer is required. Download: https://nodejs.org/
   pause
   exit /b 1
 )
-if not exist node_modules (
+if not exist "node_modules\" (
   call npm.cmd ci
   if errorlevel 1 (
-    echo 依赖安装失败，请检查网络后重试。
+    echo Dependency installation failed. Check your network and try again.
     pause
     exit /b 1
   )
 )
-if not exist .env copy .env.example .env >nul
-echo 启动后请打开终端显示的 http://127.0.0.1 地址。
+if not exist ".env" copy /y ".env.example" ".env" >nul
+echo Starting Xunhui. Open the local URL printed below in your browser.
+echo To stop the server, press Ctrl+C, then close this window.
 call npm.cmd start
 pause
+endlocal
